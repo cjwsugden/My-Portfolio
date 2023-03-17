@@ -1,0 +1,235 @@
+body{
+    background-color: rgb(20,20,20);
+    margin: 0px;
+}
+
+#menu{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.menu-item{
+    color: white;
+    font-size: clamp(12vmin, 14vmin, 15vmin);
+    font-family: 'Raleway', sans-serif;
+    display: block;
+    text-decoration: none;
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+
+    transition: opacity 400ms ease;
+}
+
+#menu-items{
+    margin-left: 8vw;
+    position: relative;
+    z-index: 2;
+}
+
+#menu-items:hover > .menu-item{
+    opacity:0.3;
+}
+
+#menu-items:hover > .menu-item:hover{
+    opacity: 1;
+}
+
+#menu-bg-pattern{
+    height: 100vh;
+    width: 100vw;
+
+    background-image: radial-gradient(rgba(2255, 255, 255, 0.1) 9%, transparent 9%);
+    background-position: 0% 0%;
+    background-size: 12vmin 12vmin;
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+
+    transition: opacity 800ms ease, background-size 800ms ease, background-position 800ms ease;
+}
+
+#menu-items:hover ~ #menu-bg-pattern{
+    background-size:11vmin 11vmin;
+    opacity: 0.5;
+}
+
+#menu[data-active-index="0"] > #menu-bg-pattern{
+    background-position: 0% -25%;
+}
+
+#menu[data-active-index="1"] > #menu-bg-pattern{
+    background-position: 0% -50%;
+}
+
+#menu[data-active-index="2"] > #menu-bg-pattern{
+    background-position: 0% -75%;
+}
+
+#menu[data-active-index="3"] > #menu-bg-pattern{
+    background-position: 0% -100%;
+}
+
+#menu-bg-image{
+    height: 100%;
+    width: 100%;
+
+    background-image: url("./bg.jpg");
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+    background-position: center 40%;
+    opacity: 0.15;
+
+    transition: opacity 800ms ease,
+    background-size 800ms ease,
+    background-position 800ms ease;
+    z-index: 0;
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -wekit-background-size: cover;
+    background-size:cover;
+}
+
+#menu-items:hover ~ #menu-bg-image{
+    background-size: cover;
+    opacity: 0.10;
+}
+
+#menu[data-active-index="0"] > #menu-bg-image {
+    background-position: center 45%;
+}
+  
+#menu[data-active-index="1"] > #menu-bg-image {
+    background-position: center 50%;
+}
+  
+#menu[data-active-index="2"] > #menu-bg-image {
+    background-position: center 55%;
+}
+  
+#menu[data-active-index="3"] > #menu-bg-image {
+    background-position: center 60%;
+}
+
+#my-name{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5vmin;
+    width: 75%;
+    padding-left: 5%
+}
+
+.fa-linkedin{
+    color: white;
+    font-size: 4vw;
+    padding-left: 7%;
+}
+
+.fa-square-github{
+    color:white;
+    font-size: 4vw;
+    padding-left: 7%;
+}
+
+.fa-file-invoice{
+    color:white;
+    font-size: 4vw;
+    padding-left: 7%;
+}
+
+.important-links{
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    z-index: 2;
+    padding-right: 2%;
+    padding-left: 15%;
+}
+
+@media all and (max-width:1000px){
+    .fa-linkedin{
+        font-size: 5vw;
+    }
+
+    #my-name{
+        width:70%;
+    }
+    
+    .fa-square-github{
+        font-size: 5vw;
+    }
+    
+    .fa-file-invoice{
+        font-size: 5vw;
+        padding-right:2vw;
+    }
+
+    .important-links{
+        padding: 0;
+        float: left;
+        padding-left:0;
+        width:30%
+    }
+}
+
+@media all and (max-width:800px){
+    #my-name{
+        width:60%;
+    }
+
+    .important-links{
+        width: 40%;
+    }
+
+    .fa-linkedin{
+        font-size: 9vw;
+    }
+    
+    .fa-square-github{
+        font-size: 9vw;
+    }
+    
+    .fa-file-invoice{
+        font-size: 9vw;
+    }
+
+    .menu-item{
+        display: flex;
+        margin: auto;
+    }
+
+    #menu-items{
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+        position: relative;
+        padding: 0;
+        z-index: 2;
+        margin: auto;
+    }
+}
+
+.myResume{
+    display: flex;
+    text-decoration: none;
+    background-color: white;
+    padding: 0.2vw 0.8vw;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 4px;
+    color: #2E2C3F;
+    font-size: 2.1vw;
+}
+
+#nav-home{
+    position: absolute;
+    display: flex;
+    height: 12vh;
+    background-color: rgba(0,0,0,1);
+    width: 100vw;
+    top: 0;
+    align-items: center;
+}
