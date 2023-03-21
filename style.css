@@ -236,6 +236,7 @@ body{
 
 .container{
     position: relative;
+    background-color: rgb(17, 149, 201);
 }
 
 .nav{
@@ -259,21 +260,94 @@ body{
 
 .navbar-links{
     width: 40vw;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    float: right;
 }
 
 .navbar-links ul{
     list-style: none;
+    float: right;
 }
 
 .navbar-links ul li{
     display: inline-block;
     padding: 0 3%;
+    float: right;
 }
 
 .navbar-links li a{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
-    
+}
+
+.main{
+    width: 80vw;
+    padding-top: 3vh;
+    margin: auto;
+    position: relative;
+    top: 12vh;
+}
+
+.card{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    width: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card-header img{
+    width: 100%;
+}
+
+.category{
+    color: #a8a8a8;
+    font-size: 0.8rem;
+    padding-left: 20px;
+}
+
+.category h4{
+    margin-bottom: 0;
+}
+
+.card-title{
+    padding-left: 20px;
+}
+
+.card-title h2{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.card-desc{
+    margin: 10px 20px;
+}
+
+.card-buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+.card-buttons a{
+    text-decoration: none;
+    color: white;
+}
+
+.button1{
+    background-color: #669472;
+    width: 6vw;
+    padding: 1vh 0;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.button2{
+    background-color: #3e86bd;
+    width: 6vw;
+    padding: 1vh 0;
+    text-align: center;
+    border-radius: 3px;
 }
